@@ -15,6 +15,24 @@
 
   gtag('config', 'AW-16776550131');
 </script>
+<!-- Event snippet for Compra (1) conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-16776550131/eH8SCL6Wh-sZEPOt178-',
+      'transaction_id': '',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<meta charset="utf-8" />    
     <title>Black Week BlackHat - BlackHat Brazil - Curso Programação/ADS</title>    
@@ -85,9 +103,9 @@
                 <h3 style="font-size: 14px!important; background-color: rgba(0, 0, 0, 0.6); color: white; padding: 0px;">[SPAM E ADS][MAIS DE 200 VIDEO AULAS NO TOTAL][CURSOS VAZADOS][MAIS DE 20MIL REAIS EM CONHECIMENTO][COMO DESENVOLVER TELAFAKE][CURSO CRIATIVOS]</h3>
                 <form id="_form_198_" class="_form _form_198 _inline-form _dark" novalidate data-styles-version="5">
                     <div class="_button-wrapper _full_width">
-                        <button onclick="window.location.href='https://api.whatsapp.com/send?phone=+5512988875370&text=Me+interessei+no+Curso+Black+Hat+-+Programa%C3%A7%C3%A3o+e+Ads.+Queria+mais+informa%C3%A7%C3%B5es.'" type="button">
-                            <i class="fab fa-whatsapp" style="color: #25D366; margin-right: 8px;"></i> Enviar Mensagem no WhatsApp
-                        </button>
+<button onclick="(function() { gtag_report_conversion(); window.location.href='https://api.whatsapp.com/send?phone=+5512988875370&text=Me+interessei+no+Curso+Black+Hat+-+Programa%C3%A7%C3%A3o+e+Ads.+Queria+mais+informa%C3%A7%C3%B5es.'; })()" type="button">
+    <i class="fab fa-whatsapp" style="color: #25D366; margin-right: 8px;"></i> Enviar Mensagem no WhatsApp
+</button>
                     </div>
                     <div class="_clear-element"></div>
                     <div class="_form-thank-you" style="display:none;"></div>
